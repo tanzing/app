@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <form action="/edit" method="POST">
+        <label for="user_name"></label>
+        <input type="text" name="user_name"/><br/><br/>
+        <label for="user_type"></label>
+        <input type="text" name="user_type"/><br/><br/>
+        <button type="submit">Add</button>
+    </form>
+</div>
+{% endblock %}

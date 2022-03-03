@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Data {% endblock %}</h1>
+<div>
+    <form action="/edit", method="GET">
+        <input type="submit" value="Add Item"></br></br>
+        <table border="1">
+            <tr>
+                <th>Serial</th>
+                <th>Name</th>
+                <th>Data Type</th>
+            </tr>
+            {% for datum in data %}
+            <tr>
+                <td>{{ datum['id'] }}</td>
+                <td>{{ datum['name'] }}</td>
+                <td>{{ datum['data_type'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </form>
+</div>
+{% endblock %}
